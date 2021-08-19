@@ -1,0 +1,1 @@
+Mosquitto addon for home assistant that uses sqlite over password file
