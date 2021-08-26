@@ -9,8 +9,8 @@ MQTT broker for Home Assistant.
 You can use this add-on to install Eclipse Mosquitto, which is an open-source (EPL/EDL licensed) message broker that implements the MQTT protocol. Mosquitto is lightweight and is suitable for use on all devices from low power single board computers to full servers. For more information, please see [mosquitto].
 
 [mosquitto]: https://mosquitto.org
-[aarch64-shield]: https://img.shields.io/badge/aarch64-no-red.svg
+[aarch64-shield]: https://img.shields.io/badge/aarch64-yes-green.svg
 [amd64-shield]: https://img.shields.io/badge/amd64-yes-green.svg
-[armhf-shield]: https://img.shields.io/badge/armhf-no-red.svg
-[armv7-shield]: https://img.shields.io/badge/armv7-no-red.svg
-[i386-shield]: https://img.shields.io/badge/i386-no-red.svg
+[armhf-shield]: https://img.shields.io/badge/armhf-yes-green.svg
+[armv7-shield]: https://img.shields.io/badge/armv7-yes-green.svg
+[i386-shield]: https://img.shields.io/badge/i386-yes-green.svg
