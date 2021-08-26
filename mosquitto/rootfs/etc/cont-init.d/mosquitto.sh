@@ -29,7 +29,7 @@ else
   service_password=$(bashio::jq "${SYSTEM_USER}" ".addons.password")
 fi
 
-sqlite3 "${DB}" "drop table users; create table users(username varchar(100), pw varchar(100));"
+sqlite3 "${DB}" "drop table if exists users; create table users(username varchar(100), pw varchar(100));"
 # Set up discovery user
 password=$(np -p "${discovery_password}")
 sqlite3 "${DB}" "insert into users values('homeassistant','${password}');"
