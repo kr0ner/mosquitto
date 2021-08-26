@@ -1,5 +1,10 @@
 # Changelog
 
+## 6.0.1 SQlite
+
+- Use SQLite over password file
+- Add verbose_auth option in configuration
+
 ## 6.0.1
 
 - Fix loading custom mosquitto configuration

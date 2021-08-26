@@ -44,7 +44,8 @@
     },
     "certfile": "fullchain.pem",
     "keyfile": "privkey.pem",
-    "require_certificate": false
+    "require_certificate": false,
+    "verbose_auth": false
   },
   "schema": {
     "logins": [
@@ -60,7 +61,8 @@
     "cafile": "str?",
     "certfile": "str",
     "keyfile": "str",
-    "require_certificate": "bool"
+    "require_certificate": "bool",
+    "verbose_auth": "bool"
   },
   "image": "kr0ner/{arch}-addon-mosquitto"
 }

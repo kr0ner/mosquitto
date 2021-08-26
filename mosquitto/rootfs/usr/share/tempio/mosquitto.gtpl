@@ -16,7 +16,7 @@ auth_opt_auth_cacheseconds 300
 auth_opt_auth_cachejitter 30
 auth_opt_acl_cacheseconds 300
 auth_opt_acl_cachejitter 30
-auth_opt_log_quiet true
+auth_opt_log_quiet {{ .quiet_auth }}
 
 # SQLITE backend for the authentication plugin
 auth_opt_dbpath /etc/mosquitto/mosquitto.sqlite

@@ -12,6 +12,7 @@ declare password
 declare service_password
 declare ssl
 declare username
+declare verbose_auth
 
 # Read or create system account data
 if ! bashio::fs.file_exists "${SYSTEM_USER}"; then
@@ -67,6 +68,13 @@ else
   ssl="false"
 fi
 
+if bashio::config.true 'verbose_auth'; then
+  bashio::log.info "Verbose auth logging is enabled"
+  quiet_auth="false"
+else
+  quiet_auth="true"
+fi
+
 # Generate mosquitto configuration.
 bashio::var.json \
   cafile "${cafile}" \
@@ -75,6 +83,7 @@ bashio::var.json \
   customize_folder "$(bashio::config 'customize.folder')" \
   keyfile "${keyfile}" \
   require_certificate "^$(bashio::config 'require_certificate')" \
+  quiet_auth "^${quiet_auth}" \
   ssl "^${ssl}" \
   | tempio \
     -template /usr/share/tempio/mosquitto.gtpl \

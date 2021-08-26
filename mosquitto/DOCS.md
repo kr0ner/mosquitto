@@ -42,6 +42,7 @@ customize:
 certfile: fullchain.pem
 keyfile: privkey.pem
 require_certificate: false
+verbose_auth: false
 ```
 
 ### Option: `logins` (optional)
@@ -79,6 +80,10 @@ A file containing the private key. Place this file in the Home Assistant `ssl` f
 ### Option: `require_certificate`
 
 If set to `true` encryption will be enabled using the cert- and keyfile options.
+
+### Option: `verbose_auth`
+
+If set to `true` the auth_plugin will provide verbose output.
 
 ## Home Assistant user management
 
